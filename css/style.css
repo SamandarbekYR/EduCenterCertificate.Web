@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+body {
+  display: flex;
+  justify-content: center;
+  background: url('../Images/bg.png');
+  font-family: 'Barlow', sans-serif;
+}
+
+.container {
+  padding: 0 10px;
+}
+
+.loading {
+  position: fixed;
+  z-index: 999;
+  height: 2px;
+  width: 2px;
+  overflow: show;
+  margin: auto;
+}
+
+.header-title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.header-title img {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+}
+
+.header-title h1 {
+  color: #125754;
+  font-size: 26px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.form-control {
+  display: inline-block;
+  margin-bottom: 12px;
+  width: 100%;
+  max-width: 300px;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.col-md-12 {
+  margin-top: 50px;
+}
+
+.g-recaptch {
+  display: inline-block;
+}
+
+.captcha-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.SearchBtn {
+  text-transform: none;
+  overflow: visible;
+  padding: 12px 20px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background-color: #01bab4;
+  color: #fff;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 450px) {
+  .header-title h1 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 355px) {
+  .form-control {
+    max-width: 280px;
+  }
+}
