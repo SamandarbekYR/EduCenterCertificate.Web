@@ -145,6 +145,7 @@ const getData = async () => {
     `;
   } else {
     document.body.removeChild(Loading);
+    elResult.innerHTML = '';
     return (elErrMsg.style.display = 'block');
   }
 };
