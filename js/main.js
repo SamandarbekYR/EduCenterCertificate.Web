@@ -35,12 +35,12 @@ const getData = async () => {
     `https://edu-center.1kb.uz/api/Sertificate/getby?CandidateNo=${elInputFirst.value}&CertificateNo=${elInputSecond.value}`
   );
 
-  const data = await res.json();
-
-  if (data) {
+  if (res.status == 200) {
+    const data = await res.json();
     document.body.removeChild(Loading);
+    elErrMsg.style.display = 'none';
 
-    elResult.innerHTML += `
+    elResult.innerHTML = `
     <div class="row" ng-show="Sertifika!=null &amp;&amp; Sertifika.Id>0" id="sonuc" style="padding: 25px; margin-bottom: 50px; background-color: white;">
 
     <div class="clearfix" style="margin: 20px 0 40px 0;width: 100%;">
@@ -143,6 +143,9 @@ const getData = async () => {
 
     </div>
     `;
+  } else {
+    document.body.removeChild(Loading);
+    return (elErrMsg.style.display = 'block');
   }
 };
 
