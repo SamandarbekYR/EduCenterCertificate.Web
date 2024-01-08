@@ -1,6 +1,5 @@
 const elForm = document.querySelector('.form');
 const elResult = document.querySelector('.result');
-const errCaptcha = document.querySelector('.error-captcha');
 const elInputFirst = document.querySelector('.form-control-first');
 const elInputSecond = document.querySelector('.form-control-second');
 const elErrMsg = document.querySelector('.input-err-msg');
@@ -60,25 +59,25 @@ const getData = async () => {
       <div class="col center">
         <div class="form-group">
           <label class="control-label sertifika-head">Adı / Name </label>
-          <div><strong class="font1 ng-binding">${data.firstName}</strong> </div>
+          <div><strong class="font1">${data.firstName}</strong> </div>
         </div>
       </div>
       <div class="col center">
         <div class="form-group">
           <label class="control-label sertifika-head">Soyadı / Surname </label>
-          <div><strong class="font1 ng-binding">${data.lastName}</strong> </div>
+          <div><strong class="font1">${data.lastName}</strong> </div>
         </div>
       </div>
       <div class="col center">
         <div class="form-group">
           <label class="control-label sertifika-head">Aday No / Candidate Number </label>
-          <div><strong class="font1 ng-binding">${data.candidateNo}</strong> </div>
+          <div><strong class="font1">${data.candidateNo}</strong> </div>
         </div>
       </div>
       <div class="col center">
         <div class="form-group">
           <label class="control-label sertifika-head">Sertifika No / Certificate Number </label>
-          <div><strong class="font1 ng-binding">${data.certificateNo}</strong> </div>
+          <div><strong class="font1">${data.certificateNo}</strong> </div>
         </div>
       </div>
     </div>
@@ -157,8 +156,6 @@ elForm.addEventListener('submit', (evt) => {
 
   if (!captcha.length) {
     return alert('Güvenlik doğrulaması yapmadınız.');
-  } else {
-    errCaptcha.innerHTML = '';
   }
 
   if (!elInputFirst.value.length || !elInputSecond.value.length) {

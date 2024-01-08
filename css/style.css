@@ -212,6 +212,10 @@ p {
   text-transform: uppercase;
 }
 
+.ng-binding {
+  text-transform: capitalize;
+}
+
 .alert-success {
   color: #fff !important;
   background-color: #01bab4 !important;
